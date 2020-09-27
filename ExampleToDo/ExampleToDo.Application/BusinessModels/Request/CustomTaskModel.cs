@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace ExampleToDo.Application.BusinessModels
+﻿namespace ExampleToDo.Application.BusinessModels
 {
     public class CustomTaskModel : NamedIdentifiableModel
     {
