@@ -1,11 +1,13 @@
 ﻿using ExampleToDo.Domain.Interfaces;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ExampleToDo.Domain.Specific
 {
     public class CustomTaskList<TDomainUser> : CreatableEntity
         where TDomainUser : IDomainUser
     {
+        [Required]
         public int UserId { get; set; }
         public int? CustomTaskListGroupId { get; set; }
 

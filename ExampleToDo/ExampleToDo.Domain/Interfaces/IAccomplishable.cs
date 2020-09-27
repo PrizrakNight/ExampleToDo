@@ -6,6 +6,6 @@ namespace ExampleToDo.Domain.Interfaces
     {
         bool Accomplished { get; set; }
 
-        DateTime DateOfCompletion { get; set; }
+        DateTime? DateOfCompletion { get; set; }
     }
 }
