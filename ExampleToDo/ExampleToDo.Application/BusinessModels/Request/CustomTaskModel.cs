@@ -2,11 +2,8 @@
 
 namespace ExampleToDo.Application.BusinessModels
 {
-    public class CustomTaskModel : IdentifiableModel
+    public class CustomTaskModel : NamedIdentifiableModel
     {
-        [Required]
-        public string Name { get; set; }
-
         public string Description { get; set; }
     }
 }

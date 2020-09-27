@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ExampleToDo.Application.BusinessModels.Request
+namespace ExampleToDo.Application.BusinessModels
 {
-    public class CustomSubtaskModel : IdentifiableModel
+    public class NamedIdentifiableModel : IdentifiableModel
     {
         [Required]
         public string Name { get; set; }
