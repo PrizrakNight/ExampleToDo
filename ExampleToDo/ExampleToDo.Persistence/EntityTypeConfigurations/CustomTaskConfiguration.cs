@@ -13,6 +13,11 @@ namespace ExampleToDo.Persistence.EFCore.EntityTypeConfigurations
                    .WithOne(s => s.Task)
                    .HasForeignKey(s => s.TaskId)
                    .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(ct => ct.Files)
+                   .WithOne(ctf => ctf.CustomTask)
+                   .HasForeignKey(ctf => ctf.CustomTaskId)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

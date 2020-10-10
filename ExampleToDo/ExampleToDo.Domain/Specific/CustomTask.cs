@@ -23,5 +23,6 @@ namespace ExampleToDo.Domain.Specific
         public CustomTaskList<TDomainUser> CustomTaskList { get; set; }
 
         public ICollection<CustomSubtask<TDomainUser>> Subtasks { get; set; }
+        public ICollection<CustomTaskFile<TDomainUser>> Files { get; set; }
     }
 }

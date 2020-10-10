@@ -17,6 +17,16 @@ namespace ExampleToDo.Persistence.EFCore.EntityTypeConfigurations
                    .WithOne(tl => tl.User)
                    .HasForeignKey(tl => tl.UserId)
                    .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(aiu => aiu.ReceivedInvitations)
+                   .WithOne(i => i.Recipient)
+                   .HasForeignKey(i => i.RecipientId)
+                   .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(aiu => aiu.SentInvitations)
+                   .WithOne(i => i.Sender)
+                   .HasForeignKey(i => i.SenderId)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
