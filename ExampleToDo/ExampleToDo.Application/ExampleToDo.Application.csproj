@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExampleToDo.Domain\ExampleToDo.Domain.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.8" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\Services\" />
+    <ProjectReference Include="..\ExampleToDo.Domain\ExampleToDo.Domain.csproj" />
   </ItemGroup>
 
 </Project>
